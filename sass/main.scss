@@ -1,0 +1,197 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "colors";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
+
+article.product-card {
+    background-color: $legoblack;
+    border-bottom: 1rem solid $legogreen;
+    width: 31%;
+    overflow: hidden;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: $legowhite;
+    margin-bottom: 2rem;
+
+    > * {
+        display: block;
+        clear: both;
+    }
+
+    a {
+        color: $legoyellow;
+        padding: .5rem 0;
+        text-decoration: none;
+    }
+    button {
+        background: $legogreen;
+        color: $legowhite;
+        font-family: 'Rubik', sans-serif;
+        border: none;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+    }
+    h3{
+        margin: .2rem 0 .5rem 0;
+        text-transform: uppercase;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+
+body {
+    background-color: $legoyellow;
+    background-image: url('../images/mainbackground.png');
+    font-family: 'Rubik', sans-serif;
+    font-size: $rootsize;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#cart {
+    position: relative;
+    width: 100%;
+    max-width: 50px;
+    .label {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        text-align: center;
+        color: $legowhite;
+        background-color: $legored;
+        position: absolute;
+        top: -1.3rem;
+        left: -1.3rem;
+        box-sizing: border-box;
+        padding-top: 5px;
+    }
+}
+
+
+div.container {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: 0 auto;
+    background-color: $legowhite;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    a{
+    width: 100%;
+    max-width: 250px; 
+    }
+    img{ 
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    }
+}
+
+#cartview {
+    width: 100%;
+    max-width: 500px;
+    background-color: $legoblack;
+    color: $legowhite;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    border-left: .5rem solid $legogreen;
+    border-bottom: .5rem solid $legogreen;
+    padding: 1rem;
+    transition: ease-in-out .5s;
+    ul{
+    list-style-type: none;
+    padding: 0;  
+    li {
+    border-bottom: 1px solid $legogreen;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+    display: block;
+    clear: both;
+        }
+    > * {
+        box-sizing: border-box;
+        display: inline-block;
+    }
+    }
+}
+
+button.delete {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: $legored;
+    border: none;
+    color: $legowhite;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+
+main h2 {
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+nav {
+    width: 100%;
+    background-color: $legored;
+    display: flex;
+    a {
+        color: $legowhite;
+        text-decoration: none;
+        padding: .5rem 1rem;
+        border-bottom: 5px solid $legored;
+        display: inline-block;
+        text-transform: uppercase;
+        transition: ease-in-out .4s;
+        :hover {
+            color: $legoyellow;
+            border-color: $legoyellow;
+        }
+        .active {
+            background-color: $legoyellow;
+            border-color: $legoblack;
+            color: $legoblack;
+            :hover {
+                color: $legored;
+            }
+        }
+    }
+
+}
+
+span.price, span.quantity{
+    width: 3rem;
+    .title{
+        width: calc(100% - 9rem );
+    }
+}
+
+
